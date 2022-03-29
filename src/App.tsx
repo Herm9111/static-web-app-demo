@@ -8,7 +8,7 @@ function App() {
     fetch('/getSomeData')
     .then(res => res.json())
     .then(json => setData(json));
-  },[]);
+  },[setData]);
   return (
     <div className="App">
       <header className="App-header">
