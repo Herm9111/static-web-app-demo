@@ -6,7 +6,7 @@ import { ISomeData } from '../api/common/interfaces/some-data-interface';
 function App() {
   const [data, setData] = useState<ISomeData>();
   useEffect(() => {
-    fetch('/getSomeData')
+    fetch('/api/getSomeData')
     .then(res => res.json())
     .then((json: ISomeData) => setData(json));
   },[setData]);
@@ -15,7 +15,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          {`This data was fetched from an API: ${data?.data} and number: ${data?.number}`}
+          {`This data was fetched from some API: ${data?.data} and number: ${data?.number}`}
         </p>
       </header>
     </div>

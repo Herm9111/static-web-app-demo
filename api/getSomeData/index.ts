@@ -4,7 +4,7 @@ const httpTrigger: AzureFunction = async function (context: Context, req: HttpRe
     context.log('HTTP trigger function processed a request.');
     const responseMessage: ISomeData = {
         data:'SomeDATA',
-        number: 1
+        number: 3
     };
 
     context.res = {
